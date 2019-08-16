@@ -39,6 +39,7 @@ public class UserController {
         if(user == null){
             return new JsonResult(0, "未登陆");
         }
+        System.out.println("test git");
         Double balance = userService.selectBalanceByCode(user.getBankCode());
         JsonResult result = new JsonResult(1, balance);
         return result;
